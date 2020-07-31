@@ -1,0 +1,12 @@
+Blog app
+
+create anew blog post with title and blogText
+
+1 page of site you can save a new blog form
+
+
+1 page of the site you can see all the previously saved blog posts
+
+You can click on a previously saved blog post and edit it!
+
+you can click on a prvious blog post and delete it
