@@ -6,6 +6,7 @@ import Button from "./components/Button";
 import API from "./utils/API";
 import { RecipeList, RecipeListItem } from "./components/RecipeList";
 import { Container, Row, Col } from "./components/Grid";
+import axios from "axios";
 
 function App() {
 
@@ -16,11 +17,20 @@ function App() {
   const [recipeSearch, setRecipeSearch] = useState("");
 
   const handleTyping = (event) => {
-    console.log("we are typing", event.target.value);
+    console.log("we are typing", event.target.name);
     setstate({
-      title: event.target.value
+      ...state,
+      [event.target.name]: event.target.value
     })
   }
+
+  const handleSave = () => {
+    console.log("you got clicked", state)
+    axios.post("http://localhost:3001/save", state).then(function (data) {
+      console.log('we got this back from the backend', data)
+    })
+  }
+
 
   console.log("this is our state!", state)
   return (
@@ -40,11 +50,11 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <input onChange={handleTyping}>
+          <input name="title" onChange={handleTyping}>
 
           </input>
-          <textarea></textarea>
-          <button>save</button>
+          <textarea name="blog" onChange={handleTyping}></textarea>
+          <button onClick={handleSave}>save</button>
 
 
         </Row>
