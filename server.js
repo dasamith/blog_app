@@ -52,7 +52,6 @@ app.post("/save", function (req, res) {
     res.json(stuffFromDb)
   })
 
-  //res.json([{ name: 'tom' }])
 })
 
 app.get("/allPost", function (req, res) {
@@ -61,6 +60,15 @@ app.get("/allPost", function (req, res) {
   blogModel.find({}).then(function (data) {
     res.json(data)
   })
+
+  //res.json([{ name: 'tom' }])
+})
+
+app.delete("/delete/:id", function (req, res) {
+  console.log("we hit the delete route", req.params)
+  blogModel.remove({ _id: req.params.id }, function (err) {
+    console.log('err ', err)
+  });
 })
 
 // Send every request to the React app

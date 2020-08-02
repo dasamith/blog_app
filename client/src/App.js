@@ -18,6 +18,7 @@ function App() {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/NewPost" component={NewPost} />
+
         </div>
       </Router>
     </div>

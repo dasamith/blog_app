@@ -19,6 +19,15 @@ function Home() {
         })
     }, [])
 
+    const handleDelete = (id) => {
+        console.log("you got clicked", id)
+        axios.delete("http://localhost:3001/delete/" + id).then(function (data) {
+            console.log('we got this back from the backend', data)
+        })
+    }
+
+
+
 
     console.log("this is our state, ", state)
     return (
@@ -31,7 +40,10 @@ function Home() {
             {state.blogPosts.map(function (blog) {
                 console.log("Lopping", blog)
                 return (
-                    <h1>{blog.title}</h1>
+                    <div>
+                        <h1>{blog.title}</h1>
+                        <button onClick={() => { handleDelete(blog._id) }}>delete</button>
+                    </div>
                 )
             })}
         </div>
