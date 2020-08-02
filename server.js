@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
 const blogModel = require("./models/blog");
+const { post } = require("./routes/apiRoutes");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -52,6 +53,14 @@ app.post("/save", function (req, res) {
   })
 
   //res.json([{ name: 'tom' }])
+})
+
+app.get("/allPost", function (req, res) {
+  console.log("we hit the route,")
+
+  blogModel.find({}).then(function (data) {
+    res.json(data)
+  })
 })
 
 // Send every request to the React app

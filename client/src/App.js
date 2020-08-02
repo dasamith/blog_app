@@ -1,64 +1,25 @@
 import React, { useState } from "react";
-import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Input from "./components/Input";
-import Button from "./components/Button";
-import API from "./utils/API";
-import { RecipeList, RecipeListItem } from "./components/RecipeList";
-import { Container, Row, Col } from "./components/Grid";
-import axios from "axios";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './pages/Home.js'
+import NewPost from "./pages/NewPost.js"
+
 
 function App() {
 
-  const [state, setstate] = useState({
-    title: "",
-    blog: "",
-  });
-  const [recipeSearch, setRecipeSearch] = useState("");
 
-  const handleTyping = (event) => {
-    console.log("we are typing", event.target.name);
-    setstate({
-      ...state,
-      [event.target.name]: event.target.value
-    })
-  }
-
-  const handleSave = () => {
-    console.log("you got clicked", state)
-    axios.post("http://localhost:3001/save", state).then(function (data) {
-      console.log('we got this back from the backend', data)
-    })
-  }
-
-
-  console.log("this is our state!", state)
   return (
     <div>
-      <Nav />
-
-      <Jumbotron />
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <form>
-              <Container>
-
-
-              </Container>
-            </form>
-          </Col>
-        </Row>
-        <Row>
-          <input name="title" onChange={handleTyping}>
-
-          </input>
-          <textarea name="blog" onChange={handleTyping}></textarea>
-          <button onClick={handleSave}>save</button>
-
-
-        </Row>
-      </Container>
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/NewPost" component={NewPost} />
+        </div>
+      </Router>
     </div>
   );
 }
