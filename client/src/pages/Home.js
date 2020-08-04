@@ -17,7 +17,7 @@ function Home() {
     });
 
     useEffect(function () {
-        axios.get("http://localhost:3001/allPost").then(function (data) {
+        axios.get("/allPost").then(function (data) {
             console.log("this is our data", data.data)
             setstate({
                 blogPosts: data.data
@@ -27,7 +27,7 @@ function Home() {
 
     const handleDelete = (id) => {
         console.log("you got clicked", id)
-        axios.delete("http://localhost:3001/delete/" + id).then(function (data) {
+        axios.delete("/delete/" + id).then(function (data) {
             console.log('we got this back from the backend', data)
         })
     }
