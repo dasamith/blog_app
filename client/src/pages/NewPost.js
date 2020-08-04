@@ -4,6 +4,13 @@ import Nav from "../components/Nav";
 
 import { Container, Row, Col } from "../components/Grid";
 import axios from "axios";
+import Axios from "axios";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function NewPost() {
 
@@ -25,9 +32,16 @@ function NewPost() {
         console.log("you got clicked", state)
         //https://api.giphy.com/v1/gifs/search?api_key=gkXrF127UWQRI7iw1V1p3i0c2ypkBsHS&q=dog&limit=25&offset=0&rating=g&lang=en
 
-        axios.post("http://localhost:3001/save", state).then(function (data) {
-            console.log('we got this back from the backend', data)
+        axios.get("https://api.giphy.com/v1/gifs/search?api_key=gkXrF127UWQRI7iw1V1p3i0c2ypkBsHS&q=" + state.title + "&limit=25&offset=0&rating=g&lang=en").then(function (data) {
+            console.log("dtaa", data.data.data[2].images.original.url)
+            state.pic = data.data.data[2].images.original.url
+
+            axios.post("/save", state).then(function (data) {
+                console.log('we got this back from the backend', data)
+            })
         })
+
+
     }
 
 
@@ -35,6 +49,7 @@ function NewPost() {
     return (
         <div>
             <Nav />
+            <Link to="/">Go Home </Link>
             <Jumbotron />
             <Container>
                 <Row>

@@ -10,6 +10,10 @@ const blogSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
+    pic: {
+        type: String,
+        default: ""
+    },
 });
 
 const blog = mongoose.model("Blog", blogSchema);
