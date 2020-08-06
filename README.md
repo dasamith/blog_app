@@ -134,15 +134,20 @@ Screenshot
 
 ## API Reference
 
+    https://developers.giphy.com/
     https://www.npmjs.com/package/inquirer
     https://www.npmjs.com/package/console.table 
 
 ## Tests
     N/A
 
-## Contribute
 
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
+## Developers Info
+
+* Amith Das
+* LinkedIn : https://www.linkedin.com/in/amith-das-1775b1170/
+* GitHub : https://github.com/dasamith
+
 
 ## Credits
 upenn coding bootcamp
