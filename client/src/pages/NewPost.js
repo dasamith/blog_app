@@ -40,10 +40,13 @@ function NewPost() {
                 console.log('we got this back from the backend', data)
             })
         })
-
-
     }
 
+    const customStyles = {
+        text: {
+            display: 'block'
+        }
+    }
 
     console.log("this is our state!", state)
     return (
@@ -61,10 +64,15 @@ function NewPost() {
                     </Col>
                 </Row>
                 <Row>
-                    <input name="title" onChange={handleTyping}>
-                    </input>
-                    <textarea name="blog" onChange={handleTyping}></textarea>
-                    <button onClick={handleSave}>save</button>
+                    <div class="textspot">
+                        <input name="title" onChange={handleTyping}>
+                        </input>
+                        <textarea style={customStyles.text} name="blog" onChange={handleTyping}></textarea>
+                        <div class="savebtn">
+                            <button onClick={handleSave}>save</button>
+                        </div>
+                    </div>
+
                 </Row>
             </Container>
         </div>

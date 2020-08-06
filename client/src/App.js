@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home.js'
 import NewPost from "./pages/NewPost.js"
+import Store from './pages/Store'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/NewPost" component={NewPost} />
-
+          <Route exact path="/store" component={Store} />
         </div>
       </Router>
     </div>

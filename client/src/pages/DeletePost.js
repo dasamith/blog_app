@@ -44,10 +44,13 @@ function DeletePost() {
                     </Col>
                 </Row>
                 <Row>
-                    <input name="title" onChange={handleTyping}>
-                    </input>
-                    <textarea name="blog" onChange={handleTyping}></textarea>
-                    <button onClick={handleSave}>delete</button>
+                    <div class="post">
+                        <input name="title" onChange={handleTyping}>
+                        </input>
+                        <textarea name="blog" onChange={handleTyping}></textarea>
+                        <button onClick={handleSave}>delete</button>
+                    </div>
+
                 </Row>
             </Container>
         </div>

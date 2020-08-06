@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 
 
+
 function Home() {
 
     const [state, setstate] = useState({
@@ -40,6 +41,7 @@ function Home() {
     return (
         <div>
             <Navui />
+            <Link to="/store">Store </Link>
             <Nav />
             <Jumbotron />
             {/* <Link to="/NewPost"> New Blog Post Page! </Link> */}
@@ -49,10 +51,12 @@ function Home() {
             {state.blogPosts.map(function (blog) {
                 console.log("Lopping", blog)
                 return (
-                    <div>
+                    <div class="post">
                         <h1>{blog.title}</h1>
                         <img src={blog.pic}></img>
-                        <button onClick={() => { handleDelete(blog._id) }}>delete</button>
+
+                        <div class="deletebtn">
+                            <button onClick={() => { handleDelete(blog._id) }}>delete</button></div>
                     </div>
                 )
             })}

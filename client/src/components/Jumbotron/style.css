@@ -1,4 +1,47 @@
-.jumbotron {
-  min-height: 20px;
-  padding-top: 10px;
+*{
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+  font: bold;
 }
+img{
+  max-width: 80%;
+  float: left;
+  height: auto;
+}
+.post{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+.savebtn :hover{
+  background-color: Green;
+  color: Yellow;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  margin: 5px 10px 5px 10px;
+}
+input{
+  background-color: aquamarine;
+  padding: 10px 15px 10px 15px;
+  color: black;
+  font-weight: bolder;
+  
+}
+textarea{
+  background-color: aquamarine;
+  padding: 30px 60px 30px 60px;
+  color: black;
+  font-weight: bolder;
+}
+button{
+  background-color: aquamarine;
+  color: black;
+  padding: 5px 10px 5px 10px;
+  margin-top: 10px;
+  font-size: larger;
+}
+
+
