@@ -42,6 +42,7 @@ function Home() {
         <div>
             <Navui />
             <Link to="/store">Store </Link>
+            <link to="/AmithBio">AmithBio</link>
             <Nav />
             <Jumbotron />
             {/* <Link to="/NewPost"> New Blog Post Page! </Link> */}
