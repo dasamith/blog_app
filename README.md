@@ -1,17 +1,19 @@
-# Burger App, CLI program to handle MySQL database
+# Animal Lovers' Blog
 
-Here i've created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). i've followed the MVC design pattern; use Node and MySQL to query and route data in my app, and Handlebars to generate my HTML.
+I have created an app that not only shares user input from around the world but also posts a funny gif to lighten the mood. Along with this my app has a E-commerce platform for users to buy animal products such as food and toys for a variety of animals.
 
 
 
-* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-* Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
+* Animal Lovers' Blog helps user to save their desired animal with a notes
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
+* Animal Lovers' Blog lets user to delete their entry
 
-* Your app will store every burger in a database, whether devoured or not.
+* Animal Lovers' Blog displays all the previous and current entry 
 
+* Animal Lovers' Blog has a link called "Store", that takes you to a E-Commerce site where you can buy products for that specific Animal.
+
+* Animal Lovers' Blog Store lets you create a cart to order multiple products at the same time.
 
 ## video presentation 
     N/A
