@@ -4,7 +4,7 @@ import "./style.css";
 function Jumbotron() {
   return (
     <div className="jumbotron text-center">
-      <h1>React Blog</h1>
+      <h1>Animal Lovers' Blog</h1>
 
     </div>
   );

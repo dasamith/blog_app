@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
+import Navui from "../components/navui";
 import axios from "axios"
 import {
     BrowserRouter as Router,
@@ -38,10 +39,11 @@ function Home() {
     console.log("this is our state, ", state)
     return (
         <div>
+            <Navui />
             <Nav />
             <Jumbotron />
-            <Link to="/NewPost"> New Blog Post Page! </Link>
-            <h1> Home page!!!!!!</h1>
+            {/* <Link to="/NewPost"> New Blog Post Page! </Link> */}
+            {/* <h2> Home page!</h2> */}
 
 
             {state.blogPosts.map(function (blog) {
