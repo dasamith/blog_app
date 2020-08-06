@@ -98,6 +98,7 @@ project still in development phase
 
 ## Tech/framework used
     node.js
+    ReactJS
 
 ## Features
 
@@ -119,14 +120,17 @@ project still in development phase
 
 ## Installation
 
-    To run the template engine: node app.js
+    To run the template engine: npm Start 
+    (local deployment)
 
 ## Screenshot
 
 Screenshot
-![Screenshot](image/Capture.JPG)
+![Screenshot](Screenshot/img_1.JPG)
 
-![Screenshot](image/Capture_2.JPG)
+![Screenshot](Screenshot/Home.JPG)
+
+![Screenshot](Screenshot/Store.JPG)
 
 ## API Reference
 
