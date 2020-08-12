@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
 import Navui from "../components/navui";
 import axios from "axios"
+import AmithBio from './AmithBio'
 import {
     BrowserRouter as Router,
     Switch,
@@ -40,23 +41,23 @@ function Home() {
     console.log("this is our state, ", state)
     return (
         <div>
-            <Navui />
-            <Link to="/store">Store </Link>
-            <link to="/AmithBio">AmithBio</link>
+            {/* <Navui /> */}
+            {/* <Link to="/store">Store </Link>
+            <Link to="/about">About</Link>
             <Nav />
             <Jumbotron />
-            {/* <Link to="/NewPost"> New Blog Post Page! </Link> */}
-            {/* <h2> Home page!</h2> */}
+            <Link to="/newpost"> New Blog Post Page! </Link>
+            <h2> Home page!</h2> */}
 
 
             {state.blogPosts.map(function (blog) {
                 console.log("Lopping", blog)
                 return (
-                    <div class="post">
+                    <div key={blog._id} className="post">
                         <h1>{blog.title}</h1>
                         <img src={blog.pic}></img>
 
-                        <div class="deletebtn">
+                        <div className="deletebtn">
                             <button onClick={() => { handleDelete(blog._id) }}>delete</button></div>
                     </div>
                 )

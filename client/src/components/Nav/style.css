@@ -2,3 +2,8 @@ nav.navbar {
   text-align: center;
   
 }
+
+
+.navbar-nav{
+  background-color: #ecf0f1 !important;;
+}

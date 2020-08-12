@@ -16,6 +16,7 @@ function Store() {
                     <ul>
                         <Link to="/">Go Home </Link>
                         <Link to="/store">Store </Link>
+                        <Link to="/AmithBio">AmithBio </Link>
                     </ul>
                 </nav>
                 <h1 class="band-name band-name-large">Das Products</h1>

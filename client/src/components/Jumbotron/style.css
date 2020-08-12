@@ -1,11 +1,11 @@
-*{
+/* *{
   background-color: black;
   color: white;
   margin: 0px;
   padding: 0px;
   text-transform: capitalize;
   font: bold;
-}
+} */
 img{
   max-width: 80%;
   float: left;

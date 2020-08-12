@@ -51,8 +51,6 @@ function NewPost() {
     console.log("this is our state!", state)
     return (
         <div>
-            <Nav />
-            <Link to="/">Go Home </Link>
             <Jumbotron />
             <Container>
                 <Row>

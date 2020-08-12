@@ -37,7 +37,7 @@ export default function ButtonAppBar() {
                     <Typography variant="h6" className="navbar-brand" href="/">
                         Home Page
           </Typography>
-                    <Button variant="h6" color="inherit" className="navbar-brand" to="client\AmithBio\AmithBio.html">
+                    <Button variant="h6" color="inherit" className="navbar-brand" to="/about">
                         Creators Bio
       </Button>
                     <Link to="/NewPost"> New Blog Post Page! </Link>

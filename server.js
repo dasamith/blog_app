@@ -6,14 +6,14 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
 const blogModel = require("./models/blog");
-const { post } = require("./routes/apiRoutes");
+const post = require("./routes/apiRoutes");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 //if (process.env.NODE_ENV === "production") {
-app.use(express.static("client/build"));
+// app.use(express.static("client/build"));
 
 
 //}
@@ -21,7 +21,7 @@ app.use(express.static("client/build"));
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -73,9 +73,9 @@ app.delete("/delete/:id", function (req, res) {
 
 // Send every request to the React app
 // Define any API routes before this runs
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
